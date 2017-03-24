@@ -1,5 +1,3 @@
 node_modules/
 dist/
-.idea/modules.xml
-.idea/redux-starter-kit.iml
-.idea/workspace.xml
+.idea/
