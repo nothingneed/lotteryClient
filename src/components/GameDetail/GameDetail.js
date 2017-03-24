@@ -8,6 +8,13 @@ import {connect} from 'react-redux'
 import Divider from 'material-ui/Divider';
 import Slider from 'material-ui/Slider';
 import TextField from 'material-ui/TextField';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import {
+	BrowserRouter as Router,
+	Route,
+	Link
+} from 'react-router-dom'
 
 
 
@@ -17,7 +24,7 @@ class GameDetail extends Component {
 
     };
 	render() {
-		console.log(this.props.location.query)
+		console.log('------para',this.props)
 		const {allClients} = this.props
 
 		if (!allClients) {return (<div>loading...</div>)}
@@ -28,7 +35,7 @@ class GameDetail extends Component {
 
 			 clientInfo = allClients[key].list.find((e => {
 				 		console.log('mapdetail----------eee', e)
-				 		return (e.clientId == this.props.params.clientID)
+				 		return (e.clientId == this.props.match.params.clientID)
 				 	}))
 			if (clientInfo) {break}
 
@@ -37,10 +44,11 @@ class GameDetail extends Component {
 		console.log('title',clientInfo)
 		let dumpTime = clientInfo.dumpTime == '0'?<div></div>:<p>dump文件生成时间: {new Date(clientInfo.dumpTime*1000).toLocaleString()} </p>
 		return(
+			<MuiThemeProvider>
 			<div>
 				<AppBar title={clientInfo.clientId}
                     iconElementLeft={<IconButton><NavigationArrowBack /></IconButton>}
-                    onLeftIconButtonTouchTap={() => this.props.router.goBack()}
+                    onLeftIconButtonTouchTap={() => this.props.history.goBack()}
                 />
 				<p className={styles.gameItem} >
                     {/*<p style={{display: 'flex',justifyContent:  'space-between'}} >*/}
@@ -70,6 +78,7 @@ class GameDetail extends Component {
 
 				/>
 			</div>
+				</MuiThemeProvider>
 			)
 	}
 }

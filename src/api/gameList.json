@@ -1,73 +1,105 @@
 {
-  "0":[
-    {
-      "id": 0,
-      "time":1290371638000,
-      "league":"英超",
-      "team_host": "阿森纳",
-      "team_guest": "切尔西"
-    },
-    {
-      "id": 1,
-      "time":1290371639000,
-      "league":"英超",
-      "team_host": "曼城",
-      "team_guest": "纽卡斯尔"
-    },
-    {
-      "id": 2,
-      "time":1290371690000,
-      "league":"意甲",
-      "team_host": "国际米兰",
-      "team_guest": "罗马"
-    }
-  ],
-
-  "1":[
-    {
-      "id": 0,
-      "time":1290371638000,
-      "league":"NBA",
-      "team_host": "公牛",
-      "team_guest": "湖人"
-    },
-    {
-      "id": 1,
-      "time":1290371639000,
-      "league":"NBA",
-      "team_host": "湖人",
-      "team_guest": "火箭"
-    },
-    {
-      "id": 2,
-      "time":1290371690000,
-      "league":"NBA",
-      "team_host": "火箭",
-      "team_guest": "公牛"
-    }
-  ],
-
-  "2":[
-    {
-      "id": 0,
-      "time":1290371638000,
-      "league":"射击",
-      "team_host": "中国",
-      "team_guest": "韩国"
-    },
-    {
-      "id": 1,
-      "time":1290371639000,
-      "league":"排球",
-      "team_host": "中国",
-      "team_guest": "美国"
-    },
-    {
-      "id": 2,
-      "time":1290371690000,
-      "league":"象棋",
-      "team_host": "俄罗斯",
-      "team_guest": "美国"
-    }
-  ]
+  "command": "120106",
+  "timestamp": "2017-03-22 17:10:04",
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "dataList": [
+      {
+        "phase": "20170320",
+        "phaseDate": "2017-03-20",
+        "matchCount": 2,
+        "matchList": [
+          {
+            "matchNum": "201603083008",
+            "officialNum": "周五008",
+            "officialDate": "2016-03-08 04:00:00",
+            "endSaleTime": "2016-03-08 00:00:00",
+            "phase": "20160308",
+            "leagueName": "英超",
+            "leagueColor": "ffffff",
+            "homeName": "曼联",
+            "homeLogo": "http://pic.8win.com/pic1.jpg",
+            "awayName": "曼城",
+            "awayLogo": "http://pic.8win.com/pic2.jpg",
+            "handicap": "1",
+            "spfSaleStatus": 1,
+            "rqspfSaleStatus": 1,
+            "spfSp": [
+              {
+                "w": "2.19",
+                "d": "3.22",
+                "l": "1.43"
+              }
+            ],
+            "rqspfSp": [
+              {
+                "w": "2.19",
+                "d": "3.22",
+                "l": "1.43"
+              }
+            ],
+            "spfRate": [
+              {
+                "w": "0.10",
+                "d": "0.02",
+                "l": "0.08"
+              }
+            ],
+            "rqspfRate": [
+              {
+                "w": "0.10",
+                "d": "0.02",
+                "l": "0.08"
+              }
+            ]
+          },
+          {
+            "matchNum": "201603083000",
+            "officialNum": "周五008",
+            "officialDate": "2016-03-08 04:00:00",
+            "endSaleTime": "2016-03-08 00:00:00",
+            "phase": "20160308",
+            "leagueName": "英超",
+            "leagueColor": "ffffff",
+            "homeName": "曼联",
+            "homeLogo": "http://pic.8win.com/pic1.jpg",
+            "awayName": "曼城",
+            "awayLogo": "http://pic.8win.com/pic2.jpg",
+            "handicap": "1",
+            "spfSaleStatus": 1,
+            "rqspfSaleStatus": 1,
+            "spfSp": [
+              {
+                "w": "2.19",
+                "d": "3.22",
+                "l": "1.43"
+              }
+            ],
+            "rqspfSp": [
+              {
+                "w": "2.19",
+                "d": "3.22",
+                "l": "1.43"
+              }
+            ],
+            "spfRate": [
+              {
+                "w": "0.10",
+                "d": "0.02",
+                "l": "0.08"
+              }
+            ],
+            "rqspfRate": [
+              {
+                "w": "0.10",
+                "d": "0.02",
+                "l": "0.08"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
