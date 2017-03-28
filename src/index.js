@@ -9,7 +9,7 @@ import {makeSelectLocationState} from 'containers/App/selectors';
 
 import createRoutes from './routes';
 import App from './containers/App';
-//import { useScroll } from 'react-router-scroll';
+//import { useScroll } from 'react-router-scroll'; //此插件可修正react页面切换时页面不能自动滚动至最上方的问题, 有需要可加入
 
 import configureStore from './store'
 
@@ -20,7 +20,6 @@ const history = syncHistoryWithStore(browserHistory, store, {
     selectLocationState: makeSelectLocationState(),
 });
 
-
 const rootRoute = {
     component: App,
     childRoutes: createRoutes(store),
@@ -29,7 +28,6 @@ const rootRoute = {
 const rootEl = document.getElementById('root')
 ReactDOM.render(
     <Provider store={store}>
-
         <Router
             history={history}
             routes={rootRoute}

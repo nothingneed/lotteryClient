@@ -1,5 +1,5 @@
 /*
- * 落地页/首页
+ * 登录页
  */
 
 import React from 'react';
@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { makeSelectLogin, makeSelectUserName } from 'containers/App/selectors';
 import messages from './messages';
-import { needLogin  } from '../App/models/actions';
+import { login ,changeLoginPhoneNumber } from './models/actions';
 import { Link } from 'react-router';
 
 export class HomePage extends React.PureComponent {
@@ -18,20 +18,18 @@ export class HomePage extends React.PureComponent {
     return (
         <div>
             <Helmet
-                title="Home Page"
+                title="Login"
             />
             <div>
-                <p>
-                    {login ? messages.userName + userName :
-                        messages.notLogged}
-                </p>
-                <p>
-                    <Link to="/gameList/jczq_spf"> 足球胜平负</Link>
-                </p>
-                <p>
-                    <Link to="/gameList/jczq_spf_plus"> 单关加奖</Link>'
-
-                </p>
+                <form  onSubmit={this.props.onLogin}>
+                    <p>{messages.enterUserName}</p>
+                <input
+                    id="userName"
+                    type="text"
+                    placeholder={messages.userName}
+                    onChange={this.props.onChangeLoginPhoneNumber}
+                />
+                </form>
 
             </div>
         </div>
@@ -42,12 +40,16 @@ export class HomePage extends React.PureComponent {
 
 export function mapDispatchToProps(dispatch) {
   return {
+      onChangeLoginPhoneNumber: (evt) => dispatch(changeLoginPhoneNumber(evt.target.value)),
+      onLogin: (evt) => {
+          if (evt !== undefined && evt.preventDefault) evt.preventDefault();
+          dispatch(login());
+      },
   };
 }
 
 const mapStateToProps = createStructuredSelector({
-    login:makeSelectLogin(),
-    userName: makeSelectUserName()
+
 });
 
 

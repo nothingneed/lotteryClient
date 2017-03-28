@@ -36,7 +36,6 @@ function gameListReducer(state = initialState, action) {
           .set('loading', true)
           .set('error', false)
     case LOAD_GAMELIST_SUCCESS:
-      console.log(`get action ${JSON.stringify(action)}`)
       return state
           .set('list', action.gameList)
           .set('loading', false)

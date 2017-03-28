@@ -20,7 +20,7 @@ export function checkStore(store) {
         runSaga: isFunction,
         asyncReducers: isObject,
     };
-    console.log(store)
+
     invariant(
         conformsTo(store, shape),
         '(app/utils...) asyncInjectors: Expected a valid redux store'

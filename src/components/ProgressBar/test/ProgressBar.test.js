@@ -14,7 +14,7 @@ describe('<ProgressBar />', () => {
   });
 
   afterEach(() => {
-    clock = sinon.restore();
+  //  clock = sinon.restore();
   });
 
   it('should initially render hidden progress bar', () => {

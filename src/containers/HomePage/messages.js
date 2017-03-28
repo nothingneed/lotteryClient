@@ -1,5 +1,6 @@
 
-export default defineMessages({
-  welcomeMessage: '欢迎使用章鱼彩票',
+export default  {
+  userName: '用户名:',
+  notLogged: `未登录`
 
-});
+};

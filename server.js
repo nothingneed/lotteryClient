@@ -5,6 +5,7 @@ var express = require('express');
 const serverPort = 4000
 const app = new (require('express'))()
 
+
 const config = require('./webpack-hot-dev-server.config')
 const webserverPort = config.webserverPort
 config.entry.main.unshift("webpack-dev-server/client?http://0.0.0.0:" + webserverPort + "/", "webpack/hot/dev-server")
@@ -55,6 +56,20 @@ app.listen(serverPort, function (error) {
         console.error(error)
     } else {
         console.info('==> 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.', serverPort, serverPort)
+
+
+        var os=require('os'),
+            iptable=[],
+            ifaces=os.networkInterfaces();
+
+        for (var dev in ifaces) {
+            ifaces[dev].forEach(function(details,alias){
+                if (details.family=='IPv4') {
+                    iptable.push(details.address);
+                }
+            });
+        }
+        console.log('Or these hosts: ', iptable);
     }
 })
 

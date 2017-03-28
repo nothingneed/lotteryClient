@@ -13,7 +13,7 @@ describe('withProgressBar()', () => {
   });
 
   afterEach(() => {
-    clock = sinon.restore();
+    //clock = sinon.restore();
   });
 
   function Component() {
