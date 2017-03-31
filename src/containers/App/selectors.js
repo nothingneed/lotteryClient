@@ -57,5 +57,4 @@ export {
     makeSelectLogin,
     makeSelectUserName,
     makeSelectLocationState,
-    makeSelectLogin123,
-};
+ };
