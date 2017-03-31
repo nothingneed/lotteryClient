@@ -2,16 +2,14 @@
 
 
 ##启动方式
-- npm start：node server提供首页入口及模拟api server，webpack dev server提供静态文件
-- npm run devserver: 启动webpack - HotDevServer
+- npm start：node server提供首页入口/hotload的开发环境,可使用任意可访问本机的地址访问
 - npm run biuld: 生成生产文件
-- npm run test: 运行全部单元测试
-- npm run atest [case-name]: 运行特定的一个或几个单元测试
+- npm test: 运行全部单元测试  [pathName] 运行子组件单元测试
 
 
-##引入
+##新引入feature
 - react 15, PureComponent
-- sagas
+- redux_sagas
 - Immutable
 - reselect
 - 根据路由动态加载组件/reducer/sagas

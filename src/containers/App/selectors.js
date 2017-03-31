@@ -19,10 +19,7 @@ const makeSelectLogin = () => createSelector(
 
     }
 );
-const makeSelectLogin123 = (state) => {
-    console.log('makeSelectLogin123', state)
-    return state.getIn(['global','userData', 'login'])
-}
+
 
 /**
  * 返回已登录用户名
